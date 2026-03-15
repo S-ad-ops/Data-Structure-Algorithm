@@ -3,18 +3,27 @@
 using namespace std;
 
 class Teacher {
+private:
+    //private properties
+    int salary;
+
 public:
     //properties 
     string name;
     string dept;
     string subject;
-    int salary;
 
     //methods/member functions
     void changedept(string newdept){
         dept = newdept;
     }
-
+    //setter
+    void setSalary(int S){
+        Salary = s;
+    }
+    void getSalary(){
+        return Salary;
+    }
 };
 
 int main(){
@@ -25,12 +34,12 @@ int main(){
     t1.name = "Siddharth";
     t1.dept = "CSE";
     t1.subject = "Maths";
-    t1.salary = 50000;  
+    t1.setSalary(50000);  
 
     cout << "Teacher 1 details: " << endl;
     cout << "Name: " << t1.name << endl;
     cout << "Department: " << t1.dept << endl;
     cout << "Subject: " << t1.subject << endl;
-    cout << "Salary: " << t1.salary << endl;
+    cout << "Salary: " << t1.getSalary() << endl;
     return 0;
 }
